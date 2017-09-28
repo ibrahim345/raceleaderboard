@@ -23,6 +23,11 @@
                              </div>
                          @endif
 
+                     @if(Session::has('runner_time_delete'))
+                             <div class="alert alert-danger">
+                                 <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a><i class="fa fa-trash" aria-hidden="true"></i> {{ session('runner_time_delete') }}
+                             </div>
+                         @endif
 
 
                         @if(Session::has('runner_updated'))
@@ -60,7 +65,7 @@
                                      <td>{{ $AllFastTimes->email }}</th>
                                      <td>{{ $AllFastTimes->dob }}</th>
                                      <td>{{ $AllFastTimes->fastesttime }}</th>
-                                     <td>{{ Form::open(['route' => ['runners', $AllFastTimes->id], 'method' => 'delete']) }}
+                                     <td>{{ Form::open(['route' => ['home', $AllFastTimes->id], 'method' => 'delete']) }}
                                           <input type="hidden" name="_method" value="DELETE">
                                           <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-trash" aria-hidden="true"></i> Delete</button>
                                         {{ Form::close() }} 

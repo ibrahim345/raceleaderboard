@@ -40,3 +40,4 @@ Route::post('create', 'RunnerController@store');
 
 Route::get('/home', 'HomeController@index');
 Route::post('/home',array('uses' => 'ScoresController@storetime', 'as' => 'home'));
+Route::delete('/home/delete/{id}',array('uses' => 'HomeController@DeleteTime', 'as' => 'home'));

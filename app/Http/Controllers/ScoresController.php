@@ -56,4 +56,8 @@ class ScoresController extends Controller
         return view('welcome')
                 ->with('FastestTime',$FastestTime);
     }
+
+
+
+
 }

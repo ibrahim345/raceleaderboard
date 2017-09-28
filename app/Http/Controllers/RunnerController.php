@@ -58,7 +58,7 @@ class RunnerController extends Controller
 
 
 
-  // Method for deleting a contact entry on contacts view
+  // Method for deleting a runners entry on contacts view
     public function DeleteRunner($id)
     {
       RunnerModel::destroy($id);
@@ -71,7 +71,7 @@ class RunnerController extends Controller
 
 
 
-// Method for editing contacts on contacts view
+// Method for editing runners on runners view
     public function EditRunner($id)
     {
       $RunnerData = RunnerModel::findOrFail($id);
@@ -81,7 +81,7 @@ class RunnerController extends Controller
 
 
 
-    // Method for updating contact details on edit view
+    // Method for updating runners details on runners edit  view
     public function UpdateRunner($id, Request $request)
     {
        $UpdatedData = RunnerModel::findOrFail($id);
